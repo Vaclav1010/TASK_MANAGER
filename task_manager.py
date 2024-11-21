@@ -78,8 +78,7 @@ def zobraz_nejblizsi_deadline():
     if not close_deadlines:
         print("Žádné blízké deadliny nebyly nalezeny.")
     else:
-        for _, line in sorted(close_deadlines):
-            print(line)
+        return "\n".join(line for _, line in sorted(close_deadlines))
 
 
 def new_task():
