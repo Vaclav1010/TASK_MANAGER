@@ -72,7 +72,8 @@ def zobraz_nejblizsi_deadline():
     close_deadlines = [
         (datetime.strptime(prvek[KEY_DEADLINE], FORMAT), format_task(prvek))
         for prvek in ukoly
-        if datetime.strptime(prvek[KEY_DEADLINE], FORMAT) <= threshold
+        if datetime.strptime(prvek[KEY_DEADLINE], FORMAT) >= today
+        and datetime.strptime(prvek[KEY_DEADLINE], FORMAT) <= threshold
     ]
 
     if not close_deadlines:
