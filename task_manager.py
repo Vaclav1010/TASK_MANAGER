@@ -21,7 +21,7 @@ STAV_HOTOVO = "hotovo"
 
 
 # Nacteni ukolu
-def load_tasks():  # Načtení úkolů ze souboru
+def load_tasks():
     try:
         with open(FILE_NAME, "r") as file:
             return json.load(file)
